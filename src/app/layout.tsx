@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -13,8 +13,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "How to Study Korean",
-  description: "A minimalistic guide to learning Korean",
+  title: "Korean Study - Learn Korean",
+  description: "A minimalistic guide to learning Korean, based on How to Study Korean",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f5f0eb" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
+  ],
 };
 
 const themeScript = `

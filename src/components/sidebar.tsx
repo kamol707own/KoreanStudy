@@ -219,10 +219,8 @@ export function Sidebar({
       >
         {isCollapsed ? (
           <div className="flex flex-col items-center py-4 gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-korean to-creamy flex items-center justify-center font-bold text-background cursor-pointer"
-                 onClick={onGoHome}>
-              한
-            </div>
+            <img src="/korean-flag.png" alt="Korean Study" className="w-10 h-10 rounded-full cursor-pointer object-cover"
+                 onClick={onGoHome} />
             <Button variant="ghost" size="icon" className="h-9 w-9" onClick={onToggleCollapse}>
               <PanelLeftOpen className="w-4 h-4" />
             </Button>
@@ -251,10 +249,8 @@ export function Sidebar({
           <>
             <div className="p-4 pb-2 flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-korean to-creamy flex items-center justify-center font-bold text-background cursor-pointer"
-                     onClick={onGoHome}>
-                  한
-                </div>
+                <img src="/korean-flag.png" alt="Korean Study" className="w-10 h-10 rounded-full cursor-pointer object-cover"
+                     onClick={onGoHome} />
                 <span className="text-base font-semibold">
                   Korean <span className="text-korean">Study</span>
                 </span>
