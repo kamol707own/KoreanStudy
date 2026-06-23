@@ -1,0 +1,217 @@
+{
+  "main": {
+    "id": "3729262af13802f6",
+    "type": "split",
+    "children": [
+      {
+        "id": "edf6eba036b96c12",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "65c4175902bed014",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "unit1/lesson1.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "lesson1"
+            }
+          },
+          {
+            "id": "18e951d6a63d8bba",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "unit1/lesson2.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "lesson2"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3a35f7b7e0523191",
+    "type": "split",
+    "children": [
+      {
+        "id": "d6094ea695168103",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6998e6bdec0d187d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "b6cf5eba9da94cbf",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "5e9b6bcbddf30e14",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "77dbdb59f5b6e7ad",
+    "type": "split",
+    "children": [
+      {
+        "id": "d0d9731bb838bc40",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f10c1c38ea8634eb",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "unit1/lesson1.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for lesson1"
+            }
+          },
+          {
+            "id": "16bad01fb702c771",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "unit1/lesson1.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from lesson1"
+            }
+          },
+          {
+            "id": "ce09e2d796a91d14",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "d331bd3aa7b733f9",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "3b88f45178bf2635",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "unit1/lesson1.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of lesson1"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "65c4175902bed014",
+  "lastOpenFiles": [
+    "unit1/lesson2.md",
+    "unit1/lesson1.md",
+    "Untitled 2.base",
+    "Untitled.canvas",
+    "Untitled 1.base",
+    "Untitled 1.canvas",
+    "Untitled.base",
+    "themes/eating.md",
+    "2026-06-20.md",
+    "unit1/lesson6.md",
+    "unit0/lesson3.md",
+    "unit0/lesson2.md",
+    "unit0/lesson1.md",
+    "themes/school.md"
+  ]
+}
