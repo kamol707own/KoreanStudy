@@ -1,6 +1,18 @@
+// These MUST equal the app's ACTUAL background colors (globals.css:
+// light --background: oklch(1 0 0) = #ffffff, dark --background:
+// oklch(0.1 0.005 50) = #040302). The status bar, splash, and system bars are
+// tinted from these, so if they drift from the real page background you get a
+// visible beige/gray seam exactly where the OS chrome meets the app. Keep them
+// in sync with globals.css whenever the palette changes.
+// The status bar/splash/OS chrome are tinted from these, so they MUST be the
+// EXACT sRGB equivalent of the app's real --background in globals.css — not an
+// approximation (_oklch beats hex anyway, but if you use hexes make them
+// exact). Light --background: oklch(1 0 0) = #ffffff. Dark --background:
+// oklch(0.1 0.005 50) = #040302. When the palette changes, update BOTH here
+// and in globals.css or the OS bars stop matching the page.
 export const THEME_COLORS = {
-  light: '#f5f0eb',
-  dark: '#0a0a0a',
+  light: '#ffffff',
+  dark: '#040302',
 } as const
 
 export type Theme = keyof typeof THEME_COLORS
