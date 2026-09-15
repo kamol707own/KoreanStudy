@@ -623,7 +623,7 @@ function SidebarContent({
       </div>
 
       {/* Footer: theme toggle + language switcher, relocated from the removed topbar */}
-      <div className="mt-2 border-t border-border/50 pt-3">
+      <div className="pad-safe-bottom mt-2 border-t border-border/50 pt-3">
         <InstallAppButton className="mb-2" />
         <AccountButton />
         <SidebarControls theme={theme} onToggleTheme={onToggleTheme} />
@@ -693,7 +693,7 @@ export function Sidebar({
                 </Button>
               )
             })}
-            <div className="mt-auto flex flex-col items-center gap-1 border-t border-border/50 pt-3">
+            <div className="pad-safe-bottom mt-auto flex flex-col items-center gap-1 border-t border-border/50 pt-3">
               <AccountButton collapsed />
               <InstallAppButton iconOnly />
               <SidebarControls theme={theme} onToggleTheme={onToggleTheme} collapsed />

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { cookies } from "next/headers";
 import { notFound } from "next/navigation";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -33,6 +33,17 @@ const LOCALE_FONT_HREF: Partial<Record<AppLocale, string>> = {
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
+
+// viewport-fit=cover lets the PWA render edge-to-edge on devices with system
+// bars (iOS status bar + home indicator, Android gesture nav). Combined with
+// env(safe-area-inset-*) this makes our sticky chrome clear the bars while the
+// app background stays continuous behind them. NOTE: Next.js does NOT include
+// viewport-fit=cover by default, so we must declare it explicitly here.
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
 
 export async function generateMetadata({
   params,

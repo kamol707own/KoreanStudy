@@ -61,7 +61,7 @@ function LandingNav() {
   ]
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur pt-[env(safe-area-inset-top,0px)]">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
         <div className="flex items-center gap-3">
           <Image src="/app-logo.png" alt="Study Korean" width={32} height={32} className="h-8 w-8 rounded-lg" />
@@ -143,7 +143,7 @@ function LandingNav() {
       </div>
 
       {menuOpen && (
-        <nav className="border-t border-border/60 bg-background/95 px-4 py-2 backdrop-blur md:hidden">
+        <nav className="pad-safe-left pad-safe-right border-t border-border/60 bg-background/95 px-4 pt-2 pb-[calc(env(safe-area-inset-bottom,0px)+0.5rem)] backdrop-blur md:hidden">
           {mobileLinks.map((l) => (
             <a
               key={l.href}
@@ -615,7 +615,7 @@ export default function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border/60">
+      <footer className="pad-safe-bottom border-t border-border/60">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-8 text-center text-xs text-muted-foreground sm:flex-row sm:px-6">
           <div className="flex items-center gap-2">
             <CreditCard className="h-4 w-4" />

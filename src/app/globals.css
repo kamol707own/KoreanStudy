@@ -130,6 +130,7 @@
     @apply border-border;
   }
   html {
+    background: var(--background);
     scroll-behavior: smooth;
     scrollbar-width: thin;
     /* The window width must NEVER change no matter what happens on the page
@@ -203,4 +204,22 @@
 }
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
+}
+
+/* Safe-area helpers: only PICKED interactive chrome (sticky headers, bottom
+   navs, pinned sidebar footers) uses these to clear the iOS/Android status
+   bar and gesture/home indicator. The app background stays continuous and
+   edge-to-edge — we never pad the whole app, so the system bars never appear
+   as a "fake bar" against a background that stops short of the viewport edge. */
+.pad-safe-top {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+.pad-safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+.pad-safe-left {
+  padding-left: env(safe-area-inset-left, 0px);
+}
+.pad-safe-right {
+  padding-right: env(safe-area-inset-right, 0px);
 }
