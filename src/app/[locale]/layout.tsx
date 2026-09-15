@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from "next";
+import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import { notFound } from "next/navigation";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -7,6 +7,7 @@ import { getMessages, getTranslations } from "next-intl/server";
 import { Analytics } from "@vercel/analytics/next";
 import { AccountProvider } from "@/components/account-provider";
 import { locales, type AppLocale } from "@/i18n/routing";
+import { THEME_COLORS } from "@/lib/theme";
 import "../globals.css";
 
 const geistSans = Geist({
@@ -58,13 +59,6 @@ export async function generateMetadata({
   };
 }
 
-export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f5f0eb" },
-    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
-  ],
-};
-
 export default async function LocaleLayout({
   children,
   params,
@@ -99,6 +93,8 @@ export default async function LocaleLayout({
     >
       <head>
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        {/* Status bar matches the saved theme (server-rendered from cookie). */}
+        <meta name="theme-color" content={THEME_COLORS[savedTheme]} />
         {fontHref && <link rel="stylesheet" href={fontHref} />}
         {/* Applies the saved theme before first paint. Without this the page
             renders dark, then flips once React mounts. A plain server-rendered
@@ -108,7 +104,7 @@ export default async function LocaleLayout({
         <script
           id="theme-init"
           dangerouslySetInnerHTML={{
-            __html: `try{var t=(document.cookie.match(/(?:^|;\\s*)korean-study-theme=([^;]*)/)||[])[1];if(t!=='light'&&t!=='dark'){t=localStorage.getItem('korean-study-theme')}if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}`,
+            __html: `try{var t=(document.cookie.match(/(?:^|;\\s*)korean-study-theme=([^;]*)/)||[])[1];if(t!=='light'&&t!=='dark'){t=localStorage.getItem('korean-study-theme')}if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute('content',t==='light'?'#f5f0eb':'#0a0a0a')}catch(e){}`,
           }}
         />
       </head>

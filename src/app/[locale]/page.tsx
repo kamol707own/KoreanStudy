@@ -10,6 +10,7 @@ import { InstallAppButton } from '@/components/install-app-button'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { cn } from '@/lib/utils'
+import { applyTheme } from '@/lib/theme'
 import { formatWon, PROMO_PRICE_WON, FULL_PRICE_WON, type AccessState } from '@/lib/billing'
 import { Cloud, Brain, BookOpen, Sun, Moon, ArrowRight, Loader2, CheckCircle2, Clock, CreditCard, ShieldCheck, UserRound, Menu, X } from 'lucide-react'
 
@@ -50,8 +51,7 @@ function LandingNav() {
     const current = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark'
     const next = current === 'dark' ? 'light' : 'dark'
     setTheme(next)
-    document.documentElement.setAttribute('data-theme', next)
-    document.cookie = `korean-study-theme=${next};path=/;max-age=31536000;samesite=lax`
+    applyTheme(next)
   }, [])
 
   const mobileLinks: { href: string; label: string }[] = [

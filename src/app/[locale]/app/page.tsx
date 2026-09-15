@@ -21,6 +21,7 @@ import { units, themes, XP_PER_LESSON } from '@/lib/data'
 import { wordsForLesson } from '@/lib/vocabulary'
 import { getCardStats, getDueIds } from '@/lib/srs'
 import { cn } from '@/lib/utils'
+import { applyTheme } from '@/lib/theme'
 
 type View = 'dashboard' | 'lesson' | 'vocabulary' | 'vocabStudy' | 'review'
 
@@ -170,8 +171,7 @@ function Home() {
         const legacy = localStorage.getItem('korean-study-theme')
         if (legacy === 'light' || legacy === 'dark') {
           applied = legacy
-          document.documentElement.setAttribute('data-theme', legacy)
-          document.cookie = `korean-study-theme=${legacy};path=/;max-age=31536000;samesite=lax`
+          applyTheme(legacy)
         }
       } catch {}
     }
@@ -199,8 +199,7 @@ function Home() {
 
     const next = currentTheme() === 'dark' ? 'light' : 'dark'
     setTheme(next)
-    document.documentElement.setAttribute('data-theme', next)
-    document.cookie = `korean-study-theme=${next};path=/;max-age=31536000;samesite=lax`
+    applyTheme(next)
   }, [])
 
   const handleGoHome = useCallback(() => {
