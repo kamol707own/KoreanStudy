@@ -1,0 +1,58 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+!.env.example
+
+# vercel
+.vercel
+
+# local LibreTranslate venv (translation tooling)
+/.lt-venv
+.lt-install.log
+.i18n-zh*.log
+.dev-server.log
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# agent tooling (local, not part of the app)
+/.agents/
+/.claude/
+/agent/
+skills-lock.json
+
+# i18n debug artifacts
+scripts/i18n/_probe*.mjs
+scripts/i18n/quota.log
