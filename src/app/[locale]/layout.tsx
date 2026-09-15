@@ -115,7 +115,7 @@ export default async function LocaleLayout({
         <script
           id="theme-init"
           dangerouslySetInnerHTML={{
-            __html: `try{var t=(document.cookie.match(/(?:^|;\\s*)korean-study-theme=([^;]*)/)||[])[1];if(t!=='light'&&t!=='dark'){t=localStorage.getItem('korean-study-theme')}if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute('content',t==='light'?'#f5f0eb':'#0a0a0a')}catch(e){}`,
+            __html: `try{var t=(document.cookie.match(/(?:^|;\\s*)korean-study-theme=([^;]*)/)||[])[1];if(t!=='light'&&t!=='dark'){t=localStorage.getItem('korean-study-theme')}if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute('content',t==='light'?'${THEME_COLORS.light}':'${THEME_COLORS.dark}')}catch(e){}`,
           }}
         />
       </head>
