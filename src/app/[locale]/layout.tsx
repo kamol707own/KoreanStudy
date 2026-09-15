@@ -44,9 +44,16 @@ export async function generateMetadata({
   return {
     title: t("title"),
     description: t("description"),
+    manifest: "/manifest.webmanifest",
+    appleWebApp: {
+      capable: true,
+      title: "Study Korean",
+      statusBarStyle: "default",
+    },
     icons: [
       { url: "/favicon.ico" },
       { url: "/favicon.png", type: "image/png" },
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
   };
 }
@@ -91,6 +98,7 @@ export default async function LocaleLayout({
       suppressHydrationWarning
     >
       <head>
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         {fontHref && <link rel="stylesheet" href={fontHref} />}
         {/* Applies the saved theme before first paint. Without this the page
             renders dark, then flips once React mounts. A plain server-rendered

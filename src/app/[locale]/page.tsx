@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl'
 import { Link, useRouter } from '@/i18n/navigation'
 import { useAppLocale } from '@/i18n/use-app-locale'
 import { useAccount } from '@/components/account-provider'
+import { InstallAppButton } from '@/components/install-app-button'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { cn } from '@/lib/utils'
@@ -105,6 +106,8 @@ function LandingNav() {
           >
             {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
           </button>
+
+          <InstallAppButton iconOnly />
 
           {/* Mobile menu toggle */}
           <button

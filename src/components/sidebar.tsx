@@ -17,6 +17,7 @@ import {
 } from '@/components/ui/select'
 import { SearchBox } from '@/components/search-box'
 import { useAccount } from '@/components/account-provider'
+import { InstallAppButton } from '@/components/install-app-button'
 import { getSiteIndex, loadVocabularyData, loadZhDict } from '@/lib/site-search'
 import type { SyncStatus } from '@/lib/sync/client'
 import {
@@ -623,6 +624,7 @@ function SidebarContent({
 
       {/* Footer: theme toggle + language switcher, relocated from the removed topbar */}
       <div className="mt-2 border-t border-border/50 pt-3">
+        <InstallAppButton className="mb-2" />
         <AccountButton />
         <SidebarControls theme={theme} onToggleTheme={onToggleTheme} />
       </div>
@@ -693,6 +695,7 @@ export function Sidebar({
             })}
             <div className="mt-auto flex flex-col items-center gap-1 border-t border-border/50 pt-3">
               <AccountButton collapsed />
+              <InstallAppButton iconOnly />
               <SidebarControls theme={theme} onToggleTheme={onToggleTheme} collapsed />
             </div>
           </div>

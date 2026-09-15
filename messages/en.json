@@ -224,6 +224,13 @@
     "navigation": "Navigation",
     "learnVocab": "Learn Vocabulary"
   },
+  "install": {
+    "installApp": "Install app",
+    "iosTitle": "Install Study Korean",
+    "iosBody": "iPhone and iPad don't show an install button, but you can add the app to your home screen:",
+    "iosSteps": "Open this page in Safari, tap Share (the icon with a square and an up arrow), then choose \"Add to Home Screen\".",
+    "gotIt": "Got it"
+  },
   "dash": {
     "tagline": "A minimalistic guide to learning Korean, based on How to Study Korean.",
     "dayStreak": "Day Streak",
